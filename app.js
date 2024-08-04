@@ -1,11 +1,11 @@
-function generate() {
+// generate the output with the user input
+const generate = () => {
 	let format = document.querySelector('.format').value,
 		textureName = document.querySelector('.name').value,
 		merSuffix = document.querySelector('.mer').value,
 		suffix = document.querySelector('.normal').value,
 		type = document.getElementById('toggle').checked === true ? 'normal' : 'heightmap',
 		textOutput = document.getElementById('output')
-
 	const output = `
 {
   "format_version": "${format}",
@@ -15,10 +15,10 @@ function generate() {
       "${type}": "${textureName}_${suffix}"
   }
 }`
-
 	textOutput.value = output
 }
 
+// generate downloadable json file when button is clicked
 const download = () => {
 	let textureName = document.querySelector('.name').value,
 		link = document.createElement('a'),
@@ -30,6 +30,18 @@ const download = () => {
 	URL.revokeObjectURL(link.href)
 }
 
+// default template
+const template = () => {
+	let textureName = document.querySelector('.name'),
+		merSuffix = document.querySelector('.mer'),
+		suffix = document.querySelector('.normal')
+	textureName.value = 'acacia_door_lower'
+	merSuffix.value = 'mer'
+	suffix = 'normal'
+	document.getElementById('toggle').checked = 1
+}
+
+// run download function when enter is pressed
 document.querySelectorAll('input').forEach((input) => {
 	input.addEventListener('keypress', () => {
 		input.onkeyup = (key) => {
@@ -39,7 +51,8 @@ document.querySelectorAll('input').forEach((input) => {
 	})
 })
 
+// set everything back to template
 document.body.onload = () => {
-	document.getElementById('toggle').checked = 1
+	template()
 	generate()
 }
