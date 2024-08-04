@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>texture_set.json Generator</title>
+		<script defer src="app.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="#" type=image/x-icon> <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin=anonymous referrerpolicy=no-referrer>
+	</head>
+	<body>
+		<div class="main">
+			<h1 class="title">texture_set.json Generator</h1>
+			<label>
+				<input type="text" class="format" placeholder="Format Version" value="1.16.100" /><br />
+				<input type="text" class="name" placeholder="Texture Name" value="acacia_door_bottom" /><br />
+				<input type="text" class="mer" placeholder="MER Suffix" value="mer" /><br />
+				<input type="text" class="normal" placeholder="Normal Suffix" value="normal" /><br />
+				<label class="bumpparent"
+					><p class="bumpmap" id="bumpmap">Normal</p>
+					<input onclick="generate()" class="toggle" type="checkbox" id="toggle"
+				/></label>
+				<button onclick="download()" class="download">Download <i class="fa-solid fa-download"></i></button>
+			</label>
+
+			<label class="output">
+				<textarea id="output" class="json">
+
+{
+  "format_version": "1.16.100",
+    "minecraft:texture_set": {
+      "color": "",
+      "metalness_emissive_roughness": "_",
+      "heightmap": "_"
+  }
+}</textarea
+				>
+			</label>
+		</div>
+	</body>
+</html>

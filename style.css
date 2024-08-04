@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: monospace;
+}
+
+body {
+	background: #151515;
+}
+
+.main {
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 3rem;
+}
+
+.main > .title {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 3rem;
+	transform: translate(-50%, -50%);
+	color: #f1f1f1;
+	user-select: none;
+}
+
+.json {
+	width: 40rem;
+	padding-bottom: 17rem;
+	margin-left: 2rem;
+	font-size: 1.6rem;
+}
+
+.bumpparent {
+	display: flex;
+}
+
+.toggle {
+	margin-left: 1rem;
+}
+
+.download {
+	margin-left: 1rem;
+	cursor: pointer;
+	color: #f1f1f1;
+	border: none;
+	background: #328f32;
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 3rem;
+	border-radius: 0.5rem;
+	margin-left: 0;
+}
+
+#output {
+	background: #101010;
+	color: #f1f1f1;
+	padding-left: 3px;
+	border-color: #050505;
+	border-radius: 0.5rem;
+}
+
+input[type='text'] {
+	background: #101010;
+	border: none;
+	padding: 0.5rem;
+	color: #f1f1f1;
+	border-radius: 0.5rem;
+}
+
+input[type='text']:focus {
+	border: 1px solid #050505;
+}
+
+.bumpmap {
+	color: #f1f1f1;
+}
