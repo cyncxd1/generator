@@ -41,14 +41,13 @@ const template = () => {
 	document.getElementById('toggle').checked = 1
 }
 
-// run download function when enter is pressed
+
 document.querySelectorAll('input').forEach((input) => {
-	input.addEventListener('keypress', () => {
-		input.onkeyup = (key) => {
-			key.key === 'Enter' ? download() : generate()
-			console.log(key.key)
-		}
-	})
+	input.addEventListener('input', generate)
+	// run download function when enter is pressed
+	input.onkeydown = (inp) => {
+		if (inp.key === 'Enter') download()
+	}
 })
 
 // set everything back to template
