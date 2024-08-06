@@ -80,3 +80,58 @@ input[type='text']:focus {
 .bumpmap {
 	color: #f1f1f1;
 }
+
+/* 
+Media Queries for mobile devices 
+Credits to firmw4(Zakky) for this section
+*/
+
+@media (max-width: 768px) {
+	.main {
+		flex-direction: column;
+	}
+
+	.main > .title {
+		top: 2rem;
+		flex-direction: column;
+	}
+
+	.json {
+		width: 90%;
+		margin-left: 0;
+		padding-bottom: 5rem;
+		font-size: 1.2rem;
+	}
+
+	.download {
+		width: 90%;
+		margin: 1rem auto;
+	}
+
+	#output {
+		width: 320px;
+		height: 100px;
+	}
+}
+
+@media (max-width: 480px) {
+	.main {
+		flex-direction: column;
+	}
+
+	.main > .title {
+		font-size: 1.5rem;
+		top: 2rem;
+	}
+
+	.json {
+		width: 100%;
+		padding-bottom: 3rem;
+		font-size: 1rem;
+	}
+
+	.download {
+		width: 100%;
+		margin: 1rem 0;
+	}
+}
